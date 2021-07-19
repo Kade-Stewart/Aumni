@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="tests" name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="3" parallel="tests" name="C:/Projects/Aumni/src/main(failed)" verbose="0">
+    <classes>
+      <class name="Tests.InvalidCredentialsLoginTest">
+        <methods>
+          <include name="setup"/>
+          <include name="testIncorrectLogin"/>
+        </methods>
+      </class> <!-- Tests.InvalidCredentialsLoginTest -->
+      <class name="Tests.DemoSubmitButtonStatusTest">
+        <methods>
+          <include name="DemoSubmitButtonStatusTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- Tests.DemoSubmitButtonStatusTest -->
+    </classes>
+  </test> <!-- C:/Projects/Aumni/src/main(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->
