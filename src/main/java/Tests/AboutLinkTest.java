@@ -16,10 +16,10 @@ public class AboutLinkTest extends BaseTest{
         landingPage.clickAbout();
 
         aboutPage = new AboutPage(driver);
-        aboutPage.logPageUrl();
+        aboutPage.getPageUrl();
 
-        Assert.assertEquals("About Aumni", aboutPage.logPageTitle());
-        Assert.assertEquals("https://www.aumni.fund/about", aboutPage.logPageUrl());
+        Assert.assertEquals("About Aumni", aboutPage.getPageTitle());
+        Assert.assertEquals("https://www.aumni.fund/about", aboutPage.getPageUrl());
     }
 
 }

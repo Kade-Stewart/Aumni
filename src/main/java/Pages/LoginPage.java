@@ -22,7 +22,7 @@ public class LoginPage extends BaseClass {
         driver.findElement(By.xpath("//button[@name='submit']")).click();
     }
 
-    public String logErrorMessage(){
+    public String getErrorMessage(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='animated fadeInUp']")));
         return driver.findElement(By.xpath("//span[@class='animated fadeInUp']")).getText();
     }

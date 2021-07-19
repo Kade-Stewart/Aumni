@@ -11,13 +11,12 @@ public class AboutPage extends BaseClass{
         wait = new WebDriverWait(driver, 20);
     }
 
-    public String logPageTitle(){
-        String pageTitle = driver.getTitle();
+    public String getPageTitle(){
         wait.until(ExpectedConditions.urlContains("about"));
-        return pageTitle;
+        return driver.getTitle();
     }
 
-    public String logPageUrl(){
+    public String getPageUrl(){
         String pageURL = driver.getCurrentUrl();
         return pageURL;
     }

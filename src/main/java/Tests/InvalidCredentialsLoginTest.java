@@ -23,7 +23,7 @@ public class InvalidCredentialsLoginTest extends BaseTest{
         loginPage = new LoginPage(driver);
         loginPage.sendCredentials(userID, password);
         loginPage.clickLogin();
-        Assert.assertEquals("WRONG EMAIL OR PASSWORD.", loginPage.logErrorMessage());
+        Assert.assertEquals("WRONG EMAIL OR PASSWORD.", loginPage.getErrorMessage());
    }
 
 }
