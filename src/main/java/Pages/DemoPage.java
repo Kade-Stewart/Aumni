@@ -20,9 +20,9 @@ public class DemoPage extends BaseClass{
         System.out.println("All credential fields filled");
     }
 
-    public void checkSubmitButtonEnabled(){
+    public Boolean checkSubmitButtonEnabled(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='submit']")));
-        System.out.println("Submit Button Enabled: " + driver.findElement(By.xpath("//input[@type='submit']")).isEnabled());
+        return driver.findElement(By.xpath("//input[@type='submit']")).isEnabled();
     }
 
 }

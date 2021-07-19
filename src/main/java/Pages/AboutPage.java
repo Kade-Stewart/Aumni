@@ -11,15 +11,15 @@ public class AboutPage extends BaseClass{
         wait = new WebDriverWait(driver, 20);
     }
 
-    public void logPageTitle(){
+    public String logPageTitle(){
+        String pageTitle = driver.getTitle();
         wait.until(ExpectedConditions.urlContains("about"));
-        System.out.println("Expected page title: About Aumni");
-        System.out.println("Returned page title: " + driver.getTitle() );
+        return pageTitle;
     }
 
-    public void logPageUrl(){
-        System.out.println("Expected page Url: https://www.aumni.fund/about");
-        System.out.println("Returned page Url: " + driver.getCurrentUrl());
+    public String logPageUrl(){
+        String pageURL = driver.getCurrentUrl();
+        return pageURL;
     }
 
 }

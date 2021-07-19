@@ -3,6 +3,7 @@ package Tests;
 import Pages.LandingPage;
 import Pages.LoginBufferPage;
 import Pages.LoginPage;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
@@ -22,7 +23,7 @@ public class InvalidCredentialsLoginTest extends BaseTest{
         loginPage = new LoginPage(driver);
         loginPage.sendCredentials(userID, password);
         loginPage.clickLogin();
-        loginPage.logErrorMessage();
+        Assert.assertEquals("WRONG EMAIL OR PASSWORD.", loginPage.logErrorMessage());
    }
 
 }
